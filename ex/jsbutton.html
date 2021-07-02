@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      function themetoggle(self) {
+        if(self.value === 'day') {
+          changecolor('white', 'black', 'blue');
+          self.value = 'night';
+        }else {
+          changecolor('black', 'white', 'powderblue');
+          self.value = 'day';
+        }
+      }
+      function changecolor(bgcolor, tcolor, acolor){
+        var alist = document.querySelectorAll('a')
+        var i = 0;
+        document.querySelector('body').style.backgroundColor = bgcolor;
+        document.querySelector('body').style.color = tcolor;
+        while(i < alist.length) {
+          alist[i].style.color = acolor;
+          i += 1;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" id="themetoggle" value="night" onclick="themetoggle(this)">
+    <p>안녕하세요.</p>
+    <p><a href="jsbutton.html">jsbutton</a></p>
+
+
+  </body>
+</html>

@@ -1,0 +1,39 @@
+#active {color: red;}
+#grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+#grid #order {border-right: 1px solid gray;}
+#grid #order input {margin: 15px;}
+#grid #order ol{
+  width: 100px;
+  margin: 0;
+  padding: 20px;
+  padding-left: 33px;
+}
+#grid #article {padding-left: 25px;}
+#bottom {
+  border-top: 1px solid gray;
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+}
+body {margin: 0px;}
+
+a {color: black; text-decoration: none;}
+a:visited {color: gray;}
+
+h1 {
+  font-size: 45px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  margin: 0;
+  padding: 20px;
+}
+
+@media(max-width: 600px) {
+  #grid {display: block;}
+  #grid #order {border-right: none;}
+  #bottom {border-top: none;}
+  h1 {border-bottom: none;}
+}
